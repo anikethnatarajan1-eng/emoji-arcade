@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import EmojiGame from './EmojiGame';
+import CircleGame from './CircleGame';
+import ClickerGame from './ClickerGame';
+import TimelineGame from './TimelineGame';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/emoji" element={<EmojiGame />} />
+        <Route path="/circle" element={<CircleGame />} />
+        <Route path="/clicker" element={<ClickerGame />} />
+        <Route path="/timeline" element={<TimelineGame />} />
+      </Routes>
+    </Router>
   );
 }
 
