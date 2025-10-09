@@ -11,3 +11,9 @@ function EmojiGame() {
 }
 
 export default EmojiGame;
+import { Link } from 'react-router-dom';
+
+// Inside your component's return:
+<Link to="/">
+  <button>⬅️ Back to Home</button>
+</Link>
