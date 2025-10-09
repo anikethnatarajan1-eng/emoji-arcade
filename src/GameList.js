@@ -29,7 +29,9 @@ function GameList() {
             <h3>{game.title}</h3>
             <p>{game.description}</p>
             <Link to={game.link}>
-              <button>Play</button>
+              <button>
+                🎮 {game.title} 👉
+              </button>
             </Link>
           </li>
         ))}
