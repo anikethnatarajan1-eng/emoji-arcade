@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function GameList() {
   const [games, setGames] = useState([]);
@@ -6,10 +7,7 @@ function GameList() {
 
   useEffect(() => {
     fetch('/games.json')
-      .then((res) => {
-        if (!res.ok) throw new Error('Failed to load games.json');
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
         setGames(data);
         setLoading(false);
@@ -30,7 +28,9 @@ function GameList() {
           <li key={game.id}>
             <h3>{game.title}</h3>
             <p>{game.description}</p>
-            <a href={game.link}>Play</a>
+            <Link to={game.link}>
+              <button>Play</button>
+            </Link>
           </li>
         ))}
       </ul>

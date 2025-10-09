@@ -3,48 +3,24 @@
     "id": 1,
     "title": "Emoji Decoder",
     "description": "Guess the movie from emojis!",
-    "link": "/emoji-decoder"
+    "link": "/emoji"
   },
   {
     "id": 2,
     "title": "Draw a Perfect Circle",
     "description": "Try to draw a perfect circle — precision meets challenge!",
-    "link": "/perfect-circle"
+    "link": "/circle"
   },
   {
     "id": 3,
     "title": "Stimulation Clicker",
     "description": "Click for dopamine — addictive and oddly satisfying!",
-    "link": "/stimulation-clicker"
+    "link": "/clicker"
   },
   {
     "id": 4,
     "title": "Timeline Tangle",
     "description": "Sort historical events in the correct order — memory meets logic!",
-    "link": "/timeline-tangle"
-  },
-  {
-    "id": 5,
-    "title": "Emoji Memory Match",
-    "description": "Flip cards and match emojis to test your memory!",
-    "link": "/memory"
-  },
-  {
-    "id": 6,
-    "title": "Emoji Clicker",
-    "description": "Click emojis to earn points and unlock upgrades!",
-    "link": "/clicker"
-  },
-  {
-    "id": 7,
-    "title": "Emoji Trivia",
-    "description": "Answer emoji-themed trivia questions and beat the clock!",
-    "link": "/trivia"
-  },
-  {
-    "id": 8,
-    "title": "Emoji Puzzle",
-    "description": "Drag and drop emoji pieces to complete the puzzle!",
-    "link": "/puzzle"
+    "link": "/timeline"
   }
 ]

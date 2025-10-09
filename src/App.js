@@ -12,7 +12,6 @@ function App() {
     <Router>
       <div className="App">
         <h1>Welcome to Emoji Arcade</h1>
-
         <Routes>
           <Route path="/" element={<GameList />} />
           <Route path="/emoji" element={<EmojiGame />} />
