@@ -14,10 +14,7 @@ function App() {
         <h1>Welcome to Emoji Arcade</h1>
 
         <Routes>
-          {/* ✅ Homepage route */}
           <Route path="/" element={<GameList />} />
-
-          {/* ✅ Routes for existing game files */}
           <Route path="/emoji" element={<EmojiGame />} />
           <Route path="/circle" element={<CircleGame />} />
           <Route path="/clicker" element={<ClickerGame />} />
