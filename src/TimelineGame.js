@@ -13,6 +13,8 @@ const events = [
 const correctOrder = [1, 2, 3, 4];
 
 function DraggableEvent({ event, index, moveItem }) {
+  const scratch = new Audio('/scratch.mp3');
+
   const [, ref] = useDrag({
     type: "event",
     item: { index }
@@ -24,6 +26,7 @@ function DraggableEvent({ event, index, moveItem }) {
       if (item.index !== index) {
         moveItem(item.index, index);
         item.index = index;
+        scratch.play();
       }
     }
   });
@@ -39,6 +42,9 @@ function TimelineGame() {
   const [order, setOrder] = useState(events);
   const [message, setMessage] = useState("");
 
+  const correct = new Audio('/correct.mp3');
+  const wrong = new Audio('/wrong.mp3');
+
   const moveItem = (from, to) => {
     const updated = [...order];
     const [moved] = updated.splice(from, 1);
@@ -48,7 +54,13 @@ function TimelineGame() {
 
   const checkOrder = () => {
     const ids = order.map(e => e.id);
-    setMessage(JSON.stringify(ids) === JSON.stringify(correctOrder) ? "✅ Correct!" : "❌ Try again!");
+    if (JSON.stringify(ids) === JSON.stringify(correctOrder)) {
+      correct.play();
+      setMessage("✅ Correct!");
+    } else {
+      wrong.play();
+      setMessage("❌ Try again!");
+    }
   };
 
   return (

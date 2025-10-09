@@ -7,8 +7,12 @@ function CircleGame() {
   const [points, setPoints] = useState([]);
   const [score, setScore] = useState(null);
 
+  const scratch = new Audio('/scratch.mp3');
+  const correct = new Audio('/correct.mp3');
+
   const startDraw = (e) => {
     setDrawing(true);
+    scratch.play();
     setPoints([[e.nativeEvent.offsetX, e.nativeEvent.offsetY]]);
   };
 
@@ -32,6 +36,7 @@ function CircleGame() {
     const avg = radii.reduce((a, b) => a + b, 0) / radii.length;
     const variance = radii.reduce((sum, r) => sum + Math.abs(r - avg), 0) / radii.length;
     const score = Math.max(0, 100 - variance).toFixed(2);
+    correct.play();
     setScore(`${score}/100`);
   };
 
@@ -48,8 +53,8 @@ function CircleGame() {
       <h2>🟠 Draw a Perfect Circle</h2>
       <canvas
         ref={canvasRef}
-        width={300}
-        height={300}
+        width={400}
+        height={400}
         className="circle-canvas"
         onMouseDown={startDraw}
         onMouseMove={draw}
