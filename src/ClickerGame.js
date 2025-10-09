@@ -5,7 +5,7 @@ function ClickerGame() {
   const [clicks, setClicks] = useState(0);
 
   return (
-    <div>
+    <div className="game-container">
       <h2>🖱️ Stimulation Clicker</h2>
       <button onClick={() => setClicks(clicks + 1)}>Click Me!</button>
       <p>Clicks: {clicks}</p>

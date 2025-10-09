@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Base reset and layout */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -6,21 +6,27 @@ body {
   background: #f5f5f5;
 }
 
-/* Center the main app content */
+/* Main container for all pages */
 .App {
   text-align: center;
   padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
-/* Style for game list items */
-ul {
+/* Shared container for all game pages */
+.game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Homepage game list */
+.game-list {
   list-style: none;
   padding: 0;
 }
 
-li {
+.game-card {
   background: white;
   margin: 15px 0;
   padding: 15px;
@@ -28,7 +34,7 @@ li {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Button styling */
+/* Buttons */
 button {
   margin: 5px;
   padding: 8px 16px;
@@ -45,7 +51,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Input styling for games */
+/* Inputs for guessing games */
 input[type="text"] {
   padding: 8px;
   font-size: 1rem;
@@ -54,4 +60,21 @@ input[type="text"] {
   border: 1px solid #ccc;
   width: 80%;
   max-width: 300px;
+}
+
+/* Canvas for circle game */
+.circle-canvas {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+/* Timeline drag items */
+.timeline-item {
+  background: #fff;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  cursor: grab;
 }

@@ -12,15 +12,15 @@ function GameList() {
   }, []);
 
   return (
-    <div>
+    <div className="game-container">
       <h2>🎮 Emoji Arcade</h2>
-      <ul>
+      <ul className="game-list">
         {games.map((game) => (
-          <li key={game.id}>
+          <li key={game.id} className="game-card">
             <h3>{game.title}</h3>
             <p>{game.description}</p>
             <Link to={game.link}>
-              <button>Play {game.title}</button>
+              <button>Play</button>
             </Link>
           </li>
         ))}

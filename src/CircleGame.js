@@ -26,11 +26,6 @@ function CircleGame() {
   };
 
   const calculateScore = () => {
-    if (points.length < 10) {
-      setScore("Too few points");
-      return;
-    }
-
     const centerX = points.reduce((sum, p) => sum + p[0], 0) / points.length;
     const centerY = points.reduce((sum, p) => sum + p[1], 0) / points.length;
     const radii = points.map(([x, y]) => Math.hypot(x - centerX, y - centerY));
@@ -49,13 +44,13 @@ function CircleGame() {
   };
 
   return (
-    <div>
+    <div className="game-container">
       <h2>🟠 Draw a Perfect Circle</h2>
       <canvas
         ref={canvasRef}
         width={300}
         height={300}
-        style={{ border: '1px solid black' }}
+        className="circle-canvas"
         onMouseDown={startDraw}
         onMouseMove={draw}
         onMouseUp={endDraw}
