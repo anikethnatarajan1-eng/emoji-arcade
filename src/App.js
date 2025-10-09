@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import GameList from './components/GameList';
+import GameList from './GameList';
 import EmojiGame from './EmojiGame';
 import CircleGame from './CircleGame';
 import ClickerGame from './ClickerGame';
