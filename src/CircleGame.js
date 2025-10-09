@@ -27,7 +27,7 @@ function CircleGame() {
 
   const calculateScore = () => {
     if (points.length < 10) {
-      setScore("Too few points to score");
+      setScore("Too few points");
       return;
     }
 
@@ -50,8 +50,7 @@ function CircleGame() {
 
   return (
     <div>
-      <h2>Draw a Perfect Circle</h2>
-      <p>Click and drag to draw. Try to make it as circular as possible!</p>
+      <h2>🟠 Draw a Perfect Circle</h2>
       <canvas
         ref={canvasRef}
         width={300}
@@ -61,11 +60,9 @@ function CircleGame() {
         onMouseMove={draw}
         onMouseUp={endDraw}
       />
-      <p>Your Score: {score}</p>
+      <p>Score: {score}</p>
       <button onClick={clearCanvas}>Clear</button>
-      <Link to="/">
-        <button>⬅️ Back to Home</button>
-      </Link>
+      <Link to="/"><button>⬅️ Back</button></Link>
     </div>
   );
 }

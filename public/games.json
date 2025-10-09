@@ -1,25 +1,25 @@
 [
   {
-    "id": 1,
-    "title": "Emoji Decoder",
+    "id": "emoji",
+    "title": "Emoji Decoder 🎬",
     "description": "Guess the movie from emojis!",
     "link": "/emoji"
   },
   {
-    "id": 2,
-    "title": "Draw a Perfect Circle",
+    "id": "circle",
+    "title": "Draw a Perfect Circle 🟠",
     "description": "Try to draw a perfect circle — precision meets challenge!",
     "link": "/circle"
   },
   {
-    "id": 3,
-    "title": "Stimulation Clicker",
+    "id": "clicker",
+    "title": "Stimulation Clicker 🖱️",
     "description": "Click for dopamine — addictive and oddly satisfying!",
     "link": "/clicker"
   },
   {
-    "id": 4,
-    "title": "Timeline Tangle",
+    "id": "timeline",
+    "title": "Timeline Tangle 📅",
     "description": "Sort historical events in the correct order — memory meets logic!",
     "link": "/timeline"
   }
