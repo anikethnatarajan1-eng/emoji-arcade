@@ -59,15 +59,14 @@ function EmojiGame() {
         setHintTimerStarted(false);
       }, 1000);
     } else {
-      if (tries < 2) {
-        playSound('/wrong.mp3');
-        setFeedback(`❌ Try again! (${tries + 1}/3)`);
-        setTries(tries + 1);
-      } else {
-        playSound('/wrong.mp3');
-        setFeedback(`❌ Last try! (${tries + 1}/3)`);
-        setTries(tries + 1);
+      playSound('/wrong.mp3');
+      const newTries = tries + 1;
+      setTries(newTries);
+      if (newTries >= 3) {
+        setFeedback(`❌ Out of tries!`);
         setShowHint(true);
+      } else {
+        setFeedback(`❌ Try again! (${newTries}/3)`);
       }
     }
   };
@@ -106,14 +105,15 @@ function EmojiGame() {
           value={guess}
           onChange={(e) => setGuess(e.target.value)}
           placeholder="Type your guess..."
+          disabled={tries >= 3}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={tries >= 3}>Submit</button>
       </form>
 
       <p className="feedback">{feedback}</p>
 
       {showHint && !showAnswer && (
-        <button onClick={() => setFeedback(`💡 Hint: ${current.hint}`)}>Show Hint</button>
+        <p><strong>Hint:</strong> {current.hint}</p>
       )}
 
       {showAnswer && (
