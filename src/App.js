@@ -1,26 +1,39 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import GameList from './GameList';
-import EmojiGame from './EmojiGame';
-import CircleGame from './CircleGame';
-import ClickerGame from './ClickerGame';
-import TimelineGame from './TimelineGame';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CrafterGame from './ElementCrafter/CrafterGame';
+import CircleGame from './CircleGame/CircleGame';
+import TimelineTangle from './TimelineTangle/TimelineTangle';
+import StimulationClicker from './StimulationClicker/StimulationClicker';
+import EmojiCoder from './EmojiCoder/EmojiCoder';
 import './App.css';
+
+function Home() {
+  return (
+    <div className="home">
+      <h1>🎮 Welcome to 4ninek.fun</h1>
+      <p>Select a game to play:</p>
+      <ul className="game-list">
+        <li><Link to="/crafter">🧪 Element Crafter</Link></li>
+        <li><Link to="/circle">🟠 Draw a Perfect Circle</Link></li>
+        <li><Link to="/clicker">🧠 Stimulation Clicker</Link></li>
+        <li><Link to="/timeline">🧠 Timeline Tangle</Link></li>
+        <li><Link to="/emoji">💬 Emoji Coder</Link></li>
+      </ul>
+    </div>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<GameList />} />
-          <Route path="/emoji" element={<EmojiGame />} />
-          <Route path="/circle" element={<CircleGame />} />
-          <Route path="/clicker" element={<ClickerGame />} />
-          <Route path="/timeline" element={<TimelineGame />} />
-          <Route path="/crafter" element={<CrafterGame />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/crafter" element={<CrafterGame />} />
+        <Route path="/circle" element={<CircleGame />} />
+        <Route path="/clicker" element={<StimulationClicker />} />
+        <Route path="/timeline" element={<TimelineTangle />} />
+        <Route path="/emoji" element={<EmojiCoder />} />
+      </Routes>
     </Router>
   );
 }
