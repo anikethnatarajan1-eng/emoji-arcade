@@ -1,90 +1,57 @@
-/* General layout */
+/* Reset and base styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* Center the main app content */
 .App {
   text-align: center;
-  padding: 40px;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f9f9f9;
-  min-height: 100vh;
-}
-
-/* Header styling */
-header h1 {
-  font-size: 64px;
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: #222;
-  letter-spacing: -2px;
-}
-
-header p {
-  font-size: 20px;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-/* Game grid layout */
-.game-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Game bubble styling */
-.game-bubble {
-  background: white;
-  border: 2px solid #ddd;
-  border-radius: 12px;
   padding: 20px;
-  width: 220px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.game-bubble:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+/* Style for game list items */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-.game-bubble h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.game-bubble p {
-  font-size: 16px;
-  color: #777;
-}
-
-/* EmojiGame input and button */
-input {
-  border: 2px solid #ccc;
+li {
+  background: white;
+  margin: 15px 0;
+  padding: 15px;
   border-radius: 8px;
-  padding: 10px;
-  font-size: 16px;
-  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Button styling */
 button {
-  background-color: #222;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  margin-left: 10px;
-  font-size: 16px;
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
   cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
-  background-color: #444;
+  background-color: #0056b3;
 }
 
-/* Feedback text */
-.feedback {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
+/* Input styling for games */
+input[type="text"] {
+  padding: 8px;
+  font-size: 1rem;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 80%;
+  max-width: 300px;
 }
