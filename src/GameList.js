@@ -1,29 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function GameList() {
-  const [games, setGames] = useState([]);
-
-  useEffect(() => {
-    fetch('/games.json')
-      .then((res) => res.json())
-      .then((data) => setGames(data))
-      .catch((err) => console.error('Failed to load games:', err));
-  }, []);
-
   return (
-    <div className="game-container">
-      <h2>🎮 Emoji Arcade</h2>
-      <ul className="game-list">
-        {games.map((game) => (
-          <li key={game.id} className="game-card">
-            <h3>{game.title}</h3>
-            <p>{game.description}</p>
-            <Link to={game.link}>
-              <button>Play</button>
-            </Link>
-          </li>
-        ))}
+    <div className="App">
+      <h1>🎮 Welcome to 4niketh.fun</h1>
+      <ul style={{ listStyle: 'none', padding: 0 }}>
+        <li>
+          <h2>🧠 Emoji Decoder</h2>
+          <Link to="/emoji"><button>Play</button></Link>
+        </li>
+        <li>
+          <h2>🟠 Draw a Perfect Circle</h2>
+          <Link to="/circle"><button>Play</button></Link>
+        </li>
+        <li>
+          <h2>🖱️ Stimulation Clicker</h2>
+          <Link to="/clicker"><button>Play</button></Link>
+        </li>
+        <li>
+          <h2>📅 Timeline Tangle</h2>
+          <Link to="/timeline"><button>Play</button></Link>
+        </li>
+        <li>
+          <h2>🧪 Element Crafter</h2>
+          <Link to="/crafter"><button>Play</button></Link>
+        </li>
       </ul>
     </div>
   );
