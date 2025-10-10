@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import CrafterGame from './ElementCrafter/CrafterGame';
 import CircleGame from './CircleGame/CircleGame';
 import TimelineTangle from './TimelineTangle/TimelineTangle';
 import StimulationClicker from './StimulationClicker/StimulationClicker';
 import EmojiCoder from './EmojiCoder/EmojiCoder';
+import CrafterGame from './ElementCrafter/CrafterGame';
 import './App.css';
 
 function Home() {
   return (
     <div className="home">
-      <h1>🎮 Welcome to 4ninek.fun</h1>
+      <h1>🎮 Welcome to 4niketh.fun</h1>
       <p>Select a game to play:</p>
       <ul className="game-list">
         <li><Link to="/crafter">🧪 Element Crafter</Link></li>
