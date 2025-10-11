@@ -1,26 +1,32 @@
 [
   {
-    "id": "emoji",
-    "title": "Emoji Decoder 🎬",
-    "description": "Guess the movie from emojis!",
-    "link": "/emoji"
+    "id": "crafter",
+    "title": "Element Crafter",
+    "description": "Combine elements to discover new ones!",
+    "image": "/images/crafter.jpg"
   },
   {
     "id": "circle",
-    "title": "Draw a Perfect Circle 🟠",
-    "description": "Try to draw a perfect circle — precision meets challenge!",
-    "link": "/circle"
+    "title": "Draw a Circle",
+    "description": "Try to draw a perfect circle.",
+    "image": "/images/circle.jpg"
   },
   {
     "id": "clicker",
-    "title": "Stimulation Clicker 🖱️",
-    "description": "Click for dopamine — addictive and oddly satisfying!",
-    "link": "/clicker"
+    "title": "Stimulation Clicker",
+    "description": "Click your way to sensory overload.",
+    "image": "/images/clicker.jpg"
   },
   {
     "id": "timeline",
-    "title": "Timeline Tangle 📅",
-    "description": "Sort historical events in the correct order — memory meets logic!",
-    "link": "/timeline"
+    "title": "Timeline Tangle",
+    "description": "Untangle historical events in order.",
+    "image": "/images/timeline.jpg"
+  },
+  {
+    "id": "emoji",
+    "title": "Emoji Coder",
+    "description": "Decode emoji puzzles with logic.",
+    "image": "/images/emoji.jpg"
   }
 ]
