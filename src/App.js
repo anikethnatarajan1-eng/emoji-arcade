@@ -1,10 +1,10 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import CircleGame from './CircleGame/CircleGame';
-import TimelineTangle from './TimelineTangle/TimelineTangle';
-import StimulationClicker from './StimulationClicker/StimulationClicker';
-import EmojiCoder from './EmojiCoder/EmojiCoder';
-import CrafterGame from './ElementCrafter/CrafterGame';
+import React from 'react';
+import CrafterGame from './CrafterGame';
+import CircleGame from './CircleGame';
+import TimelineTangle from './TimelineGame';
+import StimulationClicker from './ClickerGame';
+import EmojiCoder from './EmojiGame';
 import './App.css';
 
 function Home() {

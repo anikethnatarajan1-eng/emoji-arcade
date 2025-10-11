@@ -3,10 +3,10 @@ import React from 'react';
 function DiscoveryLog({ discoveries }) {
   return (
     <div className="discovery-log">
-      <h3>Discoveries</h3>
+      <h3>Discovery Log</h3>
       <ul>
-        {discoveries.map((item, index) => (
-          <li key={index}>{item}</li>
+        {discoveries.map((el, index) => (
+          <li key={index}>{el}</li>
         ))}
       </ul>
     </div>

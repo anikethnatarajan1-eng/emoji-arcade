@@ -3,12 +3,8 @@ import React from 'react';
 function Combiner({ selected, onCombine }) {
   return (
     <div className="combiner">
-      <h3>Selected Elements</h3>
-      <div className="selected-elements">
-        {selected.map((el, i) => (
-          <span key={i} className="selected-el">{el}</span>
-        ))}
-      </div>
+      <h3>Combiner</h3>
+      <p>{selected.join(' + ') || 'Select two elements'}</p>
       <button onClick={onCombine} disabled={selected.length !== 2}>
         Combine
       </button>
